@@ -3,14 +3,40 @@ public class Kurser {
     public String kursusNavn;
     public String kursusDag;
     public String mødetidspunkt;
+    private Kursist[] kursistArray;
+    private int tilmeldte = 0;
+    private int maxtilmeldte;
+    private Kursist kursist;
+    private Type type;
 
-    Kurser(String kursusDag, String kursusNavn, String mødetidspunkt){
 
+
+    public Kurser(String kursusDag, String kursusNavn, String mødetidspunkt, Type type){
         this.kursusDag = kursusDag;
         this.kursusNavn = kursusNavn;
         this.mødetidspunkt = mødetidspunkt;
+        kursistArray = new Kursist[10];
+        this.kursist = kursist;
+        this.type = type;
+
     }
 
+    public String tilmeldKursist(Kursist kursist){
+        kursistArray[tilmeldte] = kursist;
+        tilmeldte++;
+        System.out.println(kursist.getKursistNavn() + " er oprettet på " + kursusNavn + " som deltager nr. " + tilmeldte + "." );
+        //if ()
+
+        return "";
+    }
+
+    public Type getType() {
+        return type;
+    }
+
+    public void setType(Type type) {
+        this.type = type;
+    }
     public String getMødetidspunkt() {
         return mødetidspunkt;
     }

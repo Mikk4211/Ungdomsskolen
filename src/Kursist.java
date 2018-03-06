@@ -6,7 +6,7 @@ public class Kursist {
     private String kursistKlasse;
     private String kursistSkole;
 
-    Kursist(String kursistKlasse, String kursistNavn, String kursistSkole, int kursistAlder, int kursistNr) {
+    public Kursist(String kursistKlasse, String kursistNavn, String kursistSkole, int kursistAlder, int kursistNr) {
 
         this.kursistAlder = kursistAlder;
         this.kursistKlasse = kursistKlasse;
